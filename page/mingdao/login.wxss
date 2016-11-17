@@ -1,0 +1,10 @@
+.formLogin{
+    padding: 0rpx 20px;
+    
+}
+.account{
+    width: 100%;
+}
+#txtId{
+    width: 100%;
+}

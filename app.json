@@ -4,11 +4,12 @@
     "page/calendar/detail/detail",
     "page/calendar/create/create",
     "page/calendar/edit/edit",
-    "page/calendar/list/list"
+    "page/calendar/list/list",
+    "page/mingdao/login"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "演示",
+    "navigationBarTitleText": "明道授权",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe"
   },
@@ -19,12 +20,11 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "page/calendar/",
-        "text": "创建"
+        "pagePath": "page/calendar/today/today",
+        "text": "Today"
       },
       {
-        "pagePath": "page/API/index/index",
-        "iconPath": "image/icon_API.png",
+        "pagePath": "page/calendar/create/create",
         "selectedIconPath": "image/icon_API_HL.png",
         "text": "接口"
       }

@@ -1,0 +1,15 @@
+<view class="container">
+    <form class="formLogin" catchsubmit="formSubmit" catchreset="formReset">
+        <view class="account">
+            <input id="txtId" auto-focus="true"  bindblur="idBlur" placeholder="明道账号" value="{{id}}" />
+        </view>
+        <view class="password">
+        <input id="txtPwd" bindblur="pwdBlur" password="true" placeholder="密码" value="{{pwd}}" />
+        </view>
+        <view class="login">
+        <button formType="submit" type="primary" loading="{{loading}}" >登录</button>
+        
+        </view>
+    </form>
+</view>
+
