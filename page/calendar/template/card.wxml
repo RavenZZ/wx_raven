@@ -1,0 +1,63 @@
+<template name="card" >
+  <view  class="card" id="event_{{event_id}}" data-id="{{event_id}}" data-index="{{index}}" bindtap="tapCard">
+
+    <!--<text>{{event_id}}</text>
+    <text>{{calendarName}}</text>
+    <text>beginDate{{begin_date}}</text>
+    <text>endDate:{{end_date}}</text>
+    <text>isAllday:{{is_all_day_event}}</text>
+    <text>address:{{address}}</text>
+    <text>type:{{type}}</text>
+    <text>createAccount:{{create_account.account_id}}</text>
+    <text>people:{{event_members.length}}</text>
+    <text>color:{{color}}</text>
+    <text>desc:{{event_description}}</text>-->
+    <view class="row">
+        <view class="col" class="cal-date" >
+          <text class="col">{{dayName}}</text>
+          <text class="col">{{ravenStart}}</text>
+          <text class="col">{{ravenEnd}}</text>
+        </view>
+
+        <view class="col-spliter" style="border-right-color:{{color}};"></view>
+
+        <view class="col" class="cal-name">
+          <text class="word-break">{{calendarName}}</text>
+        </view>
+    </view>
+    <view animation="{{animation}}" class="detail" >
+      
+      <view class="row-spliter {{hideDetail?'hide':''}}"></view>
+      
+      <view class="{{hideDetail?'hide':''}}">
+        <label class="lbl-address">地址: </label>
+        <text class="cal-address">{{address}}</text>
+      </view>
+
+      <view class="cal-creator {{hideDetail?'hide':''}}">
+        <label class="lbl-creator">发起者: </label>
+        <image class="memberImg" src="{{create_account.avatar}}?imageView2/1/w/50/h/50/q/100"></image>
+        <text class="cal-creator-name">{{create_account.full_name}}</text>
+      </view>
+
+
+
+
+      <view class="row-spliter {{hideDetail?'hide':''}}"></view>
+      <view class="row {{hideDetail?'hide':''}}">
+        <label class="lbl-member">日程成员: </label>
+        <image class="memberImg" src="{{create_account.avatar}}?imageView2/1/w/40/h/40/q/100"></image>
+        <block wx:for="{{event_members}}" class="row">
+          <image class="memberImg" src="{{item.avatar}}?imageView2/1/w/40/h/40/q/100"></image>
+        </block >
+      </view>
+
+      <view class="row cal-descView {{hideDetail?'hide':''}}">
+        <label class="lbl-desc">描述: </label>
+        <text class="cal-desc">{{event_description}}</text>
+      </view>
+
+
+    </view>
+  </view>
+</template>

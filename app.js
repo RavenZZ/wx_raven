@@ -6,7 +6,7 @@ App({
     let accessToken = wx.getStorageSync('access-token');
     let refreshToken = wx.getStorageSync('refresh-token');
 
-    if(accessToken && refreshToken){
+    if (accessToken && refreshToken) {
       this.globalData.accessToken = accessToken;
       this.globalData.refreshToken = refreshToken;
     }
@@ -27,6 +27,9 @@ App({
   },
   globalData: {
     wxUserInfo: null,
+    mdUserInfo: null,
+    category: null,
+
     accessToken: null,
     refreshToken: null,
     //上一次离开时的视图

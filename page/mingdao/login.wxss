@@ -1,5 +1,6 @@
+
 .formLogin{
-    padding: 0rpx 20px;
+    padding: 200rpx 20px;
     
 }
 .account{

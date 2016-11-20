@@ -1,0 +1,108 @@
+.container{
+    background:  url('/image/bg.jpg') no-repeat fixed top;
+}
+
+
+.card {
+    margin: 20rpx 20rpx;
+    padding: 20rpx;
+    background: white;
+    border-radius: 10rpx;
+}
+
+.row-spliter {
+    padding: 1rpx;
+    border-top:  1rpx dashed #e0e0e0;
+    margin: 10rpx;
+}
+
+.col-spliter{
+    padding: 10rpx;
+    border-right: 1rpx solid indigo;
+    margin: 10rpx;
+}
+.colorFlag{
+    border-left: 10rpx solid indigo;
+}
+.cal-creator{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+}
+.cal-creator-name{
+    margin-left: 15rpx;
+    vertical-align: middle;
+}
+.lbl-creator{
+    vertical-align: middle;
+}
+
+.cal-date{
+    width: 30%;
+    font-size: 40rpx;
+}
+.cal-name{
+    padding: 10rpx;
+    font-size: 30rpx;
+    width: 60%;
+}
+.lbl-address{
+     font-size: 28rpx;
+}
+.cal-address{
+    font-size: 28rpx;
+}
+.lbl-member {
+    font-size: 28rpx;
+    vertical-align: middle;
+}
+
+.lbl-desc{
+    font-size: 28rpx;
+    vertical-align: middle;
+}
+
+.cal-desc{
+     font-size: 28rpx;
+}
+
+.cal-descView{
+    margin-top:20rpx;
+}
+
+.word-break{
+    word-wrap: break-word;
+}
+
+
+.memberImg{
+    width: 40rpx;
+    height: 40rpx;
+    align-items:center;
+    margin-left: 8rpx;
+    border-radius:50%;
+    vertical-align: middle;
+}
+
+.height0 {
+    height:0;
+    overflow-y: hidden;
+}
+.detail{    
+    background: white;
+    overflow-y: hidden;
+    height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,10 @@
 {
   "pages": [
-    "page/calendar/today/today",
+     "page/calendar/today/today",
+    "page/calendar/list/list",   
     "page/calendar/detail/detail",
     "page/calendar/create/create",
-    "page/calendar/edit/edit",
-    "page/calendar/list/list",
+    "page/calendar/edit/edit",   
     "page/mingdao/login"
   ],
   "window": {

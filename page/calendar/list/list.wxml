@@ -1,4 +1,9 @@
-<view class="container">
-<text>list</text>
+<import src="../template/card.wxml" />
+
+<view class="container">  
+    <view wx:for="{{events}}">
+        <template is="card" data="{{...item}}"></template>
+        <text>=================</text>
+    </view>  
 </view>
 

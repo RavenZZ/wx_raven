@@ -72,8 +72,39 @@ class Auth {
         })
     }
 
-    static isTokenFailed(response){
-        
+    static RequestApi(url, method, data, callback) {
+        let accessToken = wx.getStorageSync('access-token');
+        data.access_token = accessToken;
+        wx.request({
+            url: url,
+            data: data,
+            method: method, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            // header: {}, // 设置请求的 header
+            success: (res) => {
+                if (Auth.isSuccess(res.data)) { // 请求成功
+                    callback(res.data);
+                } else { // 失败, 重新获取access_token
+                    let refreshToken = wx.getStorageSync('refresh-token');
+                    Auth.RefreshToken(refreshToken, () => {
+                        Auth.RequestApi(url, method, data, () => {
+                            callback(res.data);
+                        });
+                    });
+                }
+            },
+            fail: function () {
+                // fail
+            },
+            complete: function () {
+                // complete
+            }
+        })
+    }
+
+
+    static isSuccess(response) {
+        //请求失败, 重新获取token
+        return response.success == true;
     }
 
 
